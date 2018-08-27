@@ -1,10 +1,37 @@
 <head>
     <title>index.html</title>
-    <link rel="stylesheet" href="/css/index.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--<link rel="stylesheet" href="/css/index.css"/>-->
+    <link rel="stylesheet" href="/css/theme.css"/>
 </head>
 <body>
-<% site.posts.sort("date", "desc").each(function(post){ %>
-<%- partial("_partial/post_entry", {post: post}) %>
-<% }) %>
-<script src="/js/script.js"></script>
+    <div class="container">
+        <div class="nav">
+            <ul>
+                <% site.posts.sort("date", "desc").each(function(post){ %>
+                <li>
+                    <a href="position-example.html"><%- partial("_partial/post_entry", {post: post}) %></a>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+        <div class="sections">
+            <% site.posts.sort("date", "desc").each(function(post){ %>
+            <section class="elem elem-green">
+                <p>
+                    <%- partial("_partial/post_entry", {post: post}) %>
+                </p>
+            </section>
+            <% }) %>
+        </div>
+
+
+    </div>
+    <footer class="elem elem-orange">
+        <p>
+            如果你使用了一个固定定位的页眉或页脚，确保有足够的空间来显示它们！我在 <code>body</code> 上面加了 <code>margin-bottom</code> 。
+        </p>
+    </footer>
+<!--&lt;!&ndash;<script src="/js/script.js"></script>&#45;&#45;!>-->
 </body>
+</html>

@@ -1,3 +1,36 @@
-body{
+/*body{
   background: wheat;
+  background-image: url(/img/bg.jpg);
+  background-position:66% 33%;
+}*/
+
+.container {
+    background: #fff;
+  	width: 90%;
+  	margin: 30px auto;
+  	padding: 20px;
+  	border-radius: 5px;
+}
+nav {
+  outline: #87CEFF solid thick;
+  position: absolute;
+  left: 0px;
+  width: 200px;
+}
+section {
+  /* position is static by default */
+  left: 250px;
+  position: relative;
+  outline: #6C7B8B solid thick;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  background-color: white;
+  width: 100%;
+}
+body {
+  margin-bottom: 120px;
 }
